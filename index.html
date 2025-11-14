@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Plataforma ESAS - Protótipo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Plataforma ESAS (Protótipo)</h1>
+    <p>Rascunho para testes de funcionalidades avançadas.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Nova Avaliação</h2>
+      <form id="formEsas">
+        <label>Paciente</label>
+        <input id="paciente" type="text" required>
+
+        <label>Data</label>
+        <input id="dataAvaliacao" type="date" required>
+
+        <!-- Aqui você pode colar os mesmos campos de sintomas do seu diagnóstico.html -->
+        <div class="grid-2">
+          <div>
+            <label>Dor (0–10)</label>
+            <input id="dor" type="number" min="0" max="10" value="0">
+            <label>Cansaço (0–10)</label>
+            <input id="cansaco" type="number" min="0" max="10" value="0">
+            <label>Náusea (0–10)</label>
+            <input id="nausea" type="number" min="0" max="10" value="0">
+            <label>Depressão (0–10)</label>
+            <input id="depressao" type="number" min="0" max="10" value="0">
+          </div>
+          <div>
+            <label>Ansiedade (0–10)</label>
+            <input id="ansiedade" type="number" min="0" max="10" value="0">
+            <label>Sonolência (0–10)</label>
+            <input id="sonolencia" type="number" min="0" max="10" value="0">
+            <label>Falta de apetite (0–10)</label>
+            <input id="apetite" type="number" min="0" max="10" value="0">
+            <label>Bem-estar (0–10)</label>
+            <input id="bemestar" type="number" min="0" max="10" value="0">
+            <label>Falta de ar (0–10)</label>
+            <input id="faltaAr" type="number" min="0" max="10" value="0">
+          </div>
+        </div>
+
+        <label>Observações</label>
+        <textarea id="observacoes" rows="3"></textarea>
+
+        <button type="submit">Salvar avaliação (protótipo)</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Histórico (armazenado no navegador)</h2>
+      <table id="tabelaHistorico">
+        <thead>
+          <tr>
+            <th>Paciente</th>
+            <th>Data</th>
+            <th>Média</th>
+            <th>Categoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- linhas preenchidas via JS -->
+        </tbody>
+      </table>
+      <button id="btnLimpar">Limpar tudo (teste)</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
